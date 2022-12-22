@@ -45,6 +45,7 @@ app.get('/api/quote', async(req,res)=>{
 
 app.post('/api/quote', async(req,res)=>{
  const token = req.headers['x-access-token']
+ // you have to figure out how to do this
  try {
     const decoded = jwt.verify(token, 'secret123')
     const email = decoded.email
